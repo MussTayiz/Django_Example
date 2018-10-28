@@ -1,8 +1,18 @@
 <html>
-    <head>
-        <title>First Django Page</title>
-    </head>
-    <body>
-        Hello DJANGO
-    </body>
+
+<head>
+    <title>First Django Page</title>
+</head>
+
+<body>
+    Hello DJANGO<br />
+    {% for post in posts %}
+    <div>
+        <p>published : {{post.published_date}}</p>
+        <h1><a href="#">Title : {{post.title}}</a></h1>
+        <p>{{post.text}}</p>
+    </div>
+    {% endfor %}
+</body>
+
 </html>
